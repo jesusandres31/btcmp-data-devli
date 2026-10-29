@@ -53,30 +53,15 @@ Table student_courses {
 
 ---
 
-## 🧩 Docker: consola
-
-Conectarse a Postgres desde la terminal:
-
-```bash
-docker exec -it my_postgres_bootcamp psql -U myuser -d postgres
-```
-
-Comandos útiles de `psql`:
-
-```
-\l                 -- listar bases de datos
-\c nombre_db       -- conectarse a una base
-\dt                -- listar tablas
-CREATE TABLE ...   -- crear una tabla
-```
-
----
-
 ## 🧩 pgAdmin
 
 ### 💬 1. Repaso + conexión a la DB
 
-Crear una base `bootcamp`.
+Crear una base de datos:
+
+```sql
+CREATE DATABASE bootcamp;
+```
 
 Crear la tabla:
 
@@ -203,3 +188,22 @@ FROM employees
 GROUP BY department
 HAVING AVG(salary) > 4500;
 ```
+
+## 🧩 Docker: consola
+
+Conectarse a Postgres desde la terminal:
+
+```bash
+docker exec -it my_postgres_bootcamp psql -U myuser -d postgres
+```
+
+Comandos útiles de `psql`:
+
+```
+\l                 -- listar bases de datos
+\c nombre_db       -- conectarse a una base
+\dt                -- listar tablas
+CREATE TABLE ...   -- crear una tabla
+```
+
+---
